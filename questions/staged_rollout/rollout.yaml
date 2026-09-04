@@ -1,0 +1,7 @@
+channel: stable            # stable excludes prereleases; beta includes them
+security_floor: v2.98.0    # every device must be at least here, whatever its ring says
+rings:
+  canary: {release: v2.100.0, percent: 100}
+  early:  {release: v2.100.0, percent: 25}
+  broad:  {release: v2.99.0,  percent: 100}
+paused: [broad]

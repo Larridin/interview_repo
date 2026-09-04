@@ -1,0 +1,16 @@
+tools:
+  claude_code:
+    billing: usage
+    models:                                  # vendor model id: price-list id
+      claude-sonnet-4-20250514: anthropic/claude-sonnet-4
+      claude-opus-4-1: anthropic/claude-opus-4.1
+      gpt-4o-mini-2024-07-18: openai/gpt-4o-mini
+      gemini-2.5-flash: google/gemini-2.5-flash
+      grok-4: x-ai/grok-4
+  cursor:
+    billing: usage
+    unit: cents                              # vendor reports spend, not tokens
+  copilot:
+    billing: seat
+    seat_price_usd: 39.00
+    seats: 21

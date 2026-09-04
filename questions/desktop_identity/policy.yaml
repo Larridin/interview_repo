@@ -1,0 +1,8 @@
+case_insensitive: true
+tiers:                       # applied in order; first tier with exactly one match wins
+  - desktop_user_id_exact
+  - email_exact
+  - email_local_part         # "jsmith" matches employee jsmith@acme.com by the part before @
+  - strip_domain_prefix      # "CORP\jsmith" is treated as "jsmith"
+  - punctuation_fold         # ignore . _ - when comparing
+refuse_if_ambiguous: true    # a tier that matches two employees matches none

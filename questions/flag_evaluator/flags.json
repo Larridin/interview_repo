@@ -1,0 +1,55 @@
+[
+  {
+    "key": "capture-enabled",
+    "salt": "9f8e7d",
+    "on": true,
+    "variations": [true, false],
+    "offVariation": 1,
+    "contextTargets": [
+      {"contextKind": "org", "variation": 1, "values": ["org_01J7YTKQ2M", "org_01J8PPD4QX"]}
+    ],
+    "rules": [
+      {"id": "enterprise", "variation": 0,
+       "clauses": [{"contextKind": "org", "attribute": "plan", "op": "in",
+                    "values": ["enterprise"], "negate": false}]},
+      {"id": "quarter",
+       "clauses": [{"contextKind": "org", "attribute": "key", "op": "startsWith",
+                    "values": ["org_"], "negate": false}],
+       "rollout": {"contextKind": "org",
+                   "variations": [{"variation": 0, "weight": 25000},
+                                  {"variation": 1, "weight": 75000}]}}
+    ],
+    "fallthrough": {"variation": 1}
+  },
+  {
+    "key": "workgraph-enabled",
+    "salt": "a1b2c3",
+    "on": false,
+    "variations": [true, false],
+    "offVariation": 1,
+    "contextTargets": [],
+    "rules": [],
+    "fallthrough": {"variation": 0}
+  },
+  {
+    "key": "new-dashboard",
+    "salt": "44aa55",
+    "on": true,
+    "variations": [true, false],
+    "offVariation": 1,
+    "contextTargets": [
+      {"contextKind": "org", "variation": 0, "values": ["b6b1c0e2-6c1a-4f7e-9a3d-2f0c8e5d1a77"]}
+    ],
+    "rules": [
+      {"id": "not-trial",
+       "clauses": [{"contextKind": "org", "attribute": "plan", "op": "in",
+                    "values": ["trial"], "negate": true},
+                   {"contextKind": "org", "attribute": "region", "op": "in",
+                    "values": ["us", "eu"], "negate": false}],
+       "rollout": {"contextKind": "org",
+                   "variations": [{"variation": 0, "weight": 50000},
+                                  {"variation": 1, "weight": 50000}]}}
+    ],
+    "fallthrough": {"variation": 1}
+  }
+]

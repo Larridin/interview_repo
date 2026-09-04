@@ -1,0 +1,8 @@
+[
+  {"kind": "org", "key": "b6b1c0e2-6c1a-4f7e-9a3d-2f0c8e5d1a77", "plan": "enterprise", "region": "us", "workos_id": "org_01J7YTKQ2M"},
+  {"kind": "org", "key": "0e2d7c51-9b44-4d0e-8f1b-7a6c3e9d2b10", "plan": "growth",     "region": "eu", "workos_id": "org_01J8PPD4QX"},
+  {"kind": "org", "key": "5a1f3c9e-2d7b-4e8a-b6c0-9d3e1f7a2c44", "plan": "trial",      "region": "us", "workos_id": "org_01J9AAB2CD"},
+  {"kind": "org", "key": "c3d9e7f1-4a2b-4c6d-8e0f-1a2b3c4d5e6f", "plan": "growth",                     "workos_id": "org_01JA0Z9Y8X"},
+  {"kind": "org", "key": "7f6e5d4c-3b2a-4190-8f7e-6d5c4b3a2910", "plan": "enterprise", "region": "apac", "workos_id": "org_01JB1234EF"},
+  {"kind": "user", "key": "jane.doe@acme.com", "plan": "enterprise", "region": "us"}
+]
